@@ -2,9 +2,34 @@
     ViewBag.Title = "Dallin's Top 5 Restaurants in the Provo Area";
 }
 
+<!--Allows my program to enumerate through the list of FavRestaurants objects-->
+@model IEnumerable<Assignment4.Models.FavRestaurants>
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
 
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Restaurant Name</th>
+                <th>Favorite Dish</th>
+            </tr>
+        </thead>
 
+        <tbody>
 
+        </tbody>
+    </table>
+</div>
+    <ul>
+        <!--Enumerates through each object in the model to print out its attributes-->
+        @foreach (FavRestaurants i in Model)
+        {
+            <li>@i.Rank</li>
+            <li>@i.RestaurantName</li>
+        }
+
+    </ul>
 </div>

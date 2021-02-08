@@ -20,7 +20,19 @@ namespace Assignment4.Controllers
 
         public IActionResult Index()
         {
-            return View();
+
+
+            //creates a new list of FavRestaurants objects
+            List<FavRestaurants> favRests = new List<FavRestaurants>();
+
+            //adds the pre-entered restaurants into the new list
+            foreach(FavRestaurants f in FavRestaurants.GetRestaurants())
+            {
+                favRests.Add(f);
+            }
+
+            //returns the list of FavRestaurants objects in the favRests list to the Index view
+            return View(favRests);
         }
 
         public IActionResult Privacy()
