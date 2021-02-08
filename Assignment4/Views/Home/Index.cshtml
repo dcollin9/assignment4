@@ -31,6 +31,8 @@
                 <td>@f.FavDish</td>
                 <td>@f.Address</td>
                 <td>@f.Phone</td>
+
+                <!--Ensures "Coming soon." isn't displayed as a link-->
                 @if (f.Website == "Coming soon.")
                 {
                     <td>@f.Website</td>

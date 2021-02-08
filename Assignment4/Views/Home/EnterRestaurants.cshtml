@@ -2,8 +2,23 @@
 @{
     ViewBag.Title = "Enter Restaurants";
  }
+@model Assignment4.Models.EnterRestaurantsModel
+<div>
+    <form method="post" asp-action="EnterRestaurants">
+        <label asp-for="Name">Enter Your Name:</label>
+        <input asp-for="Name"/>
+        <br />
+        <label asp-for="RestaurantName">Enter the Restaurant's Name:</label>
+        <input asp-for="RestaurantName"/>
+        <br />
+        <label asp-for="FavoriteDish">Enter Your Favorite Dish at That Restaurant:</label>
+        <input asp-for="FavoriteDish"/>
+        <br />
+        <label asp-for="Phone">Enter the Restaurant's Phone Number:</label>
+        <input asp-for="Phone"/>
 
-
+    </form>
+</div>
 
 
 

@@ -18,6 +18,8 @@ namespace Assignment4.Controllers
             _logger = logger;
         }
 
+
+        //home page that displays my Top 5 Favorite Restaurants
         public IActionResult Index()
         {
 
@@ -29,6 +31,8 @@ namespace Assignment4.Controllers
             foreach(FavRestaurants f in FavRestaurants.GetRestaurants())
             {
                 favRests.Add(f);
+
+                //replaces null "Favorite Dish" and "Website" values with the appropriate string
                 f.FavDish = f.FavDish ?? "It's all tasty!";
                 f.Website = f.Website ?? "Coming soon.";
                 
@@ -37,6 +41,29 @@ namespace Assignment4.Controllers
             //returns the list of FavRestaurants objects in the favRests list to the Index view
             return View(favRests);
         }
+
+
+        [HttpGet]
+        public IActionResult EnterRestaurants()
+        {
+
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult EnterRestaurants(EnterRestaurantsModel enterRestaurants)
+        {
+            //ensures data is valid before putting it into the temporary storage
+            if (ModelState.IsValid)
+            {
+                
+                Response.Redirect("DisplayMovies");
+            }
+
+            return View();
+        }
+
 
         public IActionResult Privacy()
         {
