@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Display Restaurants";
+}
+<!--Brings an inumerable model onto the page-->
+@model IEnumerable<Assignment4.Models.EnterRestaurantsModel>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Restaurant Name</th>
+                <th>Favorite Dish</th>
+                <th>Restaurant Phone #</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <!--Populates the field with the appropriate property-->
+            @foreach (EnterRestaurantsModel t in Model)
+            {
+            <tr>
+                <td>@t.Name</td>
+                <td>@t.RestaurantName</td>
+                <td>@t.FavoriteDish</td>
+                <td>@t.Phone</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

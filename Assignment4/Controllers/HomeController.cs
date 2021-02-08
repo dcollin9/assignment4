@@ -57,13 +57,17 @@ namespace Assignment4.Controllers
             //ensures data is valid before putting it into the temporary storage
             if (ModelState.IsValid)
             {
-                
-                Response.Redirect("DisplayMovies");
+                TempStorage.AddApplication(enterRestaurants);
+                Response.Redirect("DisplayRestaurants");
             }
 
             return View();
         }
 
+        public IActionResult DisplayRestaurants()
+        {
+            return View(TempStorage.RestModel);
+        }
 
         public IActionResult Privacy()
         {

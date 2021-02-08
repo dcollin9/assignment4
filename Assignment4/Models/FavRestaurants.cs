@@ -5,6 +5,7 @@ namespace Assignment4.Models
 {
     public class FavRestaurants
     {
+        //creating properties of the Top 5 Favorite Restaurants
 
         //the Rank can only be set in this class, making it a "Read only" after being passed to the controller
         [Required]
