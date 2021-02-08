@@ -31,6 +31,7 @@ namespace Assignment4.Controllers
                 favRests.Add(f);
                 f.FavDish = f.FavDish ?? "It's all tasty!";
                 f.Website = f.Website ?? "Coming soon.";
+                
             }
 
             //returns the list of FavRestaurants objects in the favRests list to the Index view

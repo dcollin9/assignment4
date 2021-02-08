@@ -5,8 +5,10 @@ namespace Assignment4.Models
 {
     public class FavRestaurants
     {
+
+        //the Rank can only be set in this class, making it a "Read only" after being passed to the controller
         [Required]
-        readonly int Rank;
+        public int Rank { get; private set; }
 
         [Required]
         public string RestaurantName { get; set; }
