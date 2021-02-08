@@ -3,7 +3,7 @@
     ViewBag.Title = "Enter Restaurants";
  }
 @model Assignment4.Models.EnterRestaurantsModel
-<div>
+<div class="text-center">
     <form method="post" asp-action="EnterRestaurants">
         <label asp-for="Name">Enter Your Name:</label>
         <input asp-for="Name"/>
@@ -18,7 +18,7 @@
         <input asp-for="Phone"/>
         <br />
         
-        <button type="submit">Submit Info</button>
+        <button type="submit" class="btn btn-primary">Submit Info</button>
         <div asp-validation-summary="All"></div>
     </form>
 </div>

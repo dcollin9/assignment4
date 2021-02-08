@@ -54,7 +54,7 @@ namespace Assignment4.Controllers
         [HttpPost]
         public IActionResult EnterRestaurants(EnterRestaurantsModel enterRestaurants)
         {
-            //ensures data is valid before putting it into the temporary storage
+            //ensures data is valid before putting it into the temporary storage (protection against nulls)
             if (ModelState.IsValid)
             {
                 TempStorage.AddApplication(enterRestaurants);

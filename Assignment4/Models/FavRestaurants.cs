@@ -45,7 +45,7 @@ namespace Assignment4.Models
                 FavDish = "Chicken Tikki Masala",
                 Address = "463 N University Ave, Provo, UT 84601",
                 Phone = "801-111-1112",
-                Website = "bombayhouse.com"
+                Website = "https://bombayhouse.com/"
             };
             FavRestaurants fr3 = new FavRestaurants
             {

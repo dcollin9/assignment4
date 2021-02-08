@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width" />
- </head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
 
 <body>
-    <h1>@ViewBag.Title</h1>
-    
-    <a asp-action="Index">Top 5 Favorite Restaurants</a>
-    <a asp-action="EnterRestaurants">Enter Restaurants</a>
-    <a asp-action="DisplayRestaurants">Enter Restaurants</a>
+    <div class="text-center">
+        <h1>@ViewBag.Title</h1>
+
+        <a asp-action="Index">Top 5 Favorite Restaurants</a>
+        <a asp-action="EnterRestaurants">Enter Restaurants</a>
+        <a asp-action="DisplayRestaurants">Display Restaurants</a>
+    </div>
+
     @RenderBody()
+
+    <footer class="text-center" style="position:fixed; left:0px; bottom:0px; height:30px; width:100%; background:#999;">Dallin Collins, Inc. 2021</footer>
 </body>
 </html>
