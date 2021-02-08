@@ -9,27 +9,41 @@
     <h1 class="display-4">Welcome</h1>
 
 <div>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Rank</th>
                 <th>Restaurant Name</th>
                 <th>Favorite Dish</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Website</th>
             </tr>
         </thead>
 
         <tbody>
-
+            <!--Enumerates through each object in the model to print out its attributes-->
+            @foreach (FavRestaurants f in Model)
+            {
+            <tr>
+                <td>@f.Rank</td>
+                <td>@f.RestaurantName</td>
+                <td>@f.FavDish</td>
+                <td>@f.Address</td>
+                <td>@f.Phone</td>
+                @if (f.Website == "Coming soon.")
+                {
+                    <td>@f.Website</td>
+                }
+                else
+                {
+                    <td><a href="@f.Website">@f.Website</a></td>
+                }
+                
+            </tr>
+            }
         </tbody>
     </table>
 </div>
-    <ul>
-        <!--Enumerates through each object in the model to print out its attributes-->
-        @foreach (FavRestaurants i in Model)
-        {
-            <li>@i.Rank</li>
-            <li>@i.RestaurantName</li>
-        }
 
-    </ul>
 </div>

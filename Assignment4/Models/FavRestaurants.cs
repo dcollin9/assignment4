@@ -6,10 +6,10 @@ namespace Assignment4.Models
     public class FavRestaurants
     {
         [Required]
-        public int Rank { get; set; }
+        readonly int Rank;
 
         [Required]
-        public string RestaurantName { get; set; } = "It's all tasty!";
+        public string RestaurantName { get; set; }
 
         
         public string FavDish { get; set; }
@@ -21,7 +21,7 @@ namespace Assignment4.Models
         public string Phone { get; set; }
 
         
-        public string Website { get; set; } = "Coming soon";
+        public string Website { get; set; }
 
         public static FavRestaurants[] GetRestaurants()
         {
@@ -51,7 +51,7 @@ namespace Assignment4.Models
                 FavDish = "Carne Asada Tacos",
                 Address = "446 N Freedom Blvd, Provo, UT 84601",
                 Phone = "801-111-111",
-                Website = "https://www.texasroadhouse.com/locations/utah/orem"
+                Website = null
             };
             FavRestaurants fr4 = new FavRestaurants
             {
@@ -60,16 +60,16 @@ namespace Assignment4.Models
                 FavDish = "Yellow Curry",
                 Address = "410 N University Ave, Provo, UT 84601",
                 Phone = "801-111-111",
-                Website = "https://www.texasroadhouse.com/locations/utah/orem"
+                Website = "https://www.thaihut.restaurant/"
             };
             FavRestaurants fr5 = new FavRestaurants
             {
                 Rank = 5,
                 RestaurantName = "Chili's",
-                FavDish = null,
+                FavDish = "Just Bacon Burger",
                 Address = "122 E 1300 S, Orem, UT 84058",
                 Phone = "801-111-111",
-                Website = "https://www.texasroadhouse.com/locations/utah/orem"
+                Website = "https://www.chilis.com/"
             };
 
             return new FavRestaurants[] { fr1, fr2, fr3, fr4, fr5 };
