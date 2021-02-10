@@ -43,6 +43,8 @@ namespace Assignment4.Controllers
         }
 
 
+
+        //returns the page for users to enter a suggestion
         [HttpGet]
         public IActionResult EnterRestaurants()
         {
@@ -51,13 +53,15 @@ namespace Assignment4.Controllers
         }
 
 
+
+        //submits restaurants suggestions to TempStorage
         [HttpPost]
         public IActionResult EnterRestaurants(EnterRestaurantsModel enterRestaurants)
         {
 
 
 
-            //ensures data is valid before putting it into the temporary storage (protection against nulls)
+            //ensures data is valid before putting it into the list in temporary storage (protection against nulls)
             if (ModelState.IsValid)
             {
                 TempStorage.AddApplication(enterRestaurants);
@@ -67,15 +71,19 @@ namespace Assignment4.Controllers
             return View();
         }
 
+
+        //displays the list of suggested restaurants
         public IActionResult DisplayRestaurants()
         {
             return View(TempStorage.RestModel);
         }
 
+
         public IActionResult Privacy()
         {
             return View();
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

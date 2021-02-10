@@ -3,7 +3,11 @@
     ViewBag.Title = "Suggest a Restaurant";
  }
 @model Assignment4.Models.EnterRestaurantsModel
+
+<!-- Page that allows the user to enter a restaurant suggestion-->
 <div class="text-center">
+
+    <!--This form grabs the user's suggestions -->
     <form method="post" asp-action="EnterRestaurants">
         <label asp-for="Name">Enter Your Name:</label>
         <input asp-for="Name"/>

@@ -13,10 +13,11 @@ namespace Assignment4.Models
         [Required]
         public string RestaurantName { get; set; }
 
-        
+        [Required]
         public string FavoriteDish { get; set; }
 
-        [Phone]
+        //validates the phone number format
+        [RegularExpression("^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$")]
         public string Phone { get; set; }
 
     }

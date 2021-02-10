@@ -2,7 +2,8 @@
 @{
     ViewBag.Title = "Suggested Restaurants";
 }
-<!--Brings an inumerable model onto the page-->
+
+<!--Brings an enumerable model onto the page-->
 @model IEnumerable<Assignment4.Models.EnterRestaurantsModel>
 
 <div class="text-center">
@@ -17,7 +18,7 @@
         </thead>
         <tbody>
 
-            <!--Populates the field with the appropriate property-->
+            <!--Populates each field with the appropriate property-->
             @foreach (EnterRestaurantsModel t in Model)
             {
             <tr>

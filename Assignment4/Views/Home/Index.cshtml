@@ -8,6 +8,10 @@
 <div class="text-center">
     
     <!--Creates the table to store the properties of the objects-->
+
+    <!--I created a table instead of just listing out the restaurants because I preferred
+        the table format (strings looked too messy). I am still passing an array of objects
+        like the rubric asks though!-->
     <table class="table">
         <thead class="bg-primary text-white text-center">
             <tr>
@@ -21,7 +25,7 @@
         </thead>
 
         <tbody>
-            <!--Enumerates through each object in the model to print out its attributes-->
+            <!--Enumerates through each object in the model and prints out its attributes-->
             @foreach (FavRestaurants f in Model)
             {
             <tr>
@@ -31,7 +35,7 @@
                 <td>@f.Address</td>
                 <td>@f.Phone</td>
 
-                <!--Ensures "Coming soon." isn't displayed as a link-->
+                <!--Ensures the default "Coming soon." isn't displayed as a link-->
                 @if (f.Website == "Coming soon.")
                 {
                     <td>@f.Website</td>

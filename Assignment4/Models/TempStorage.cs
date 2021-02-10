@@ -12,7 +12,8 @@ namespace Assignment4.Models
         public static IEnumerable<EnterRestaurantsModel> RestModel => enterRestModel;
 
 
-        //method that can be called to add new EnterRestaurantsModel objects into the list
+        //Uses a list to display user suggestions.
+        //Is a method that can be called to add new EnterRestaurantsModel objects into the list
         public static void AddApplication(EnterRestaurantsModel enterRestaurants)
         {
             enterRestModel.Add(enterRestaurants);
